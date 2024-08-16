@@ -1,362 +1,223 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
 <head>
-  <meta charset="utf-8">
-  
-  
-  <title>量子力学推导 | Zhang Xiangqian</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="波粒二象性的能量与动量公式 在波粒二象性的框架下，粒子的能量和动量可以用波动和粒子理论来描述。以下是相关的公式： 1. 光子的能量和动量 对于光子（光的粒子），可以使用以下公式来描述它们的能量和动量：  能量公式： [ E &#x3D; h ] 其中 ( E ) 是光子的能量，( h ) 是普朗克常数（(6.626 ^{-34}) J·s），( ) 是光子的频率。 动量公式： [ p &#x3D; ] 或者可以用波长">
-<meta property="og:type" content="article">
-<meta property="og:title" content="量子力学推导">
-<meta property="og:url" content="https://frankloud.github.io/ZhangXiangqian/2024/08/16/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E6%8E%A8%E5%AF%BC/index.html">
-<meta property="og:site_name" content="Zhang Xiangqian">
-<meta property="og:description" content="波粒二象性的能量与动量公式 在波粒二象性的框架下，粒子的能量和动量可以用波动和粒子理论来描述。以下是相关的公式： 1. 光子的能量和动量 对于光子（光的粒子），可以使用以下公式来描述它们的能量和动量：  能量公式： [ E &#x3D; h ] 其中 ( E ) 是光子的能量，( h ) 是普朗克常数（(6.626 ^{-34}) J·s），( ) 是光子的频率。 动量公式： [ p &#x3D; ] 或者可以用波长">
-<meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2024-08-16T09:16:43.000Z">
-<meta property="article:modified_time" content="2024-08-16T09:37:28.990Z">
-<meta property="article:author" content="Frank Loud">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/ZhangXiangqian/atom.xml" title="Zhang Xiangqian" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="/ZhangXiangqian/favicon.png">
-  
-  
-  
-<link rel="stylesheet" href="/ZhangXiangqian/css/style.css">
-
-  
-    
-<link rel="stylesheet" href="/ZhangXiangqian/fancybox/jquery.fancybox.min.css">
-
-  
-  
-<meta name="generator" content="Hexo 7.3.0"><style>mjx-container[jax="SVG"] {
-  direction: ltr;
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Frank Loud" />
+  <title>quantum</title>
+  <style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+</style>
+  <style type="text/css">
+body {
+font-family: Arial, sans-serif;
+background-color: #C7EDCC;
+color: #333;
+margin: 200px;
+line-height: 1.6;
 }
 
-mjx-container[jax="SVG"] > svg {
-  overflow: visible;
+h1, h2, h3, h4, h5, h6 {
+color: #0056b3;
+font-weight: bold;
+margin-top: 1.5em;
+margin-bottom: 0.5em;
 }
 
-mjx-container[jax="SVG"][display="true"] {
-  display: block;
-  text-align: center;
-  margin: 1em 0;
+a {
+color: #007bff;
+text-decoration: none;
+}
+a:hover {
+text-decoration: underline;
 }
 
-mjx-container[jax="SVG"][justify="left"] {
-  text-align: left;
+pre, code {
+font-family: "Courier New", Courier, monospace;
+background-color: #f4f4f4;
+padding: 5px;
+border-radius: 5px;
+overflow-x: auto;
+}
+pre {
+padding: 10px;
+margin: 10px 0;
+}
+code {
+color: #d63384;
 }
 
-mjx-container[jax="SVG"][justify="right"] {
-  text-align: right;
+ul, ol {
+margin: 10px 0 10px 20px;
+padding: 0;
+}
+li {
+margin: 5px 0;
 }
 
-g[data-mml-node="merror"] > g {
-  fill: red;
-  stroke: red;
+table {
+width: 100%;
+border-collapse: collapse;
+margin: 20px 0;
+}
+table, th, td {
+border: 1px solid #ddd;
+}
+th, td {
+padding: 10px;
+text-align: left;
+}
+th {
+background-color: #f2f2f2;
 }
 
-g[data-mml-node="merror"] > rect[data-background] {
-  fill: yellow;
-  stroke: none;
+blockquote {
+margin: 20px;
+padding: 10px 20px;
+background-color: #f9f9f9;
+border-left: 5px solid #ccc;
 }
 
-g[data-mml-node="mtable"] > line[data-line] {
-  stroke-width: 70px;
-  fill: none;
+img {
+display: block; 
+margin: 0 auto; 
+max-width: 100%;
+height: auto;
+border-radius: 5px;
 }
 
-g[data-mml-node="mtable"] > rect[data-frame] {
-  stroke-width: 70px;
-  fill: none;
+.footnotes {
+font-size: 0.9em;
+margin-top: 20px;
+border-top: 1px solid #ddd;
+padding-top: 10px;
+}
+.footnote-ref {
+color: #007bff;
+text-decoration: none;
+}
+.footnote-backref {
+color: #007bff;
+text-decoration: none;
 }
 
-g[data-mml-node="mtable"] > .mjx-dashed {
-  stroke-dasharray: 140;
+.math {
+font-family: "Times New Roman", Times, serif;
+font-size: 1.1em;
+color: #1a1a1a;
+}
+.math-display {
+display: block;
+margin: 1em 0;
+padding: 10px;
+background-color: #f7f7f7;
+border-radius: 5px;
+text-align: center;
+}
+.math-inline {
+display: inline;
+padding: 2px;
+background-color: #f7f7f7;
+border-radius: 3px;
+}
+.katex, .mjx-math {
+font-size: 1.1em;
 }
 
-g[data-mml-node="mtable"] > .mjx-dotted {
-  stroke-linecap: round;
-  stroke-dasharray: 0,140;
+.mjx-math .mjx-highlight {
+background-color: #e6f7ff;
+border-radius: 3px;
 }
-
-g[data-mml-node="mtable"] > svg {
-  overflow: visible;
+.mjx-math .mjx-sub, .mjx-math .mjx-sup {
+font-size: 0.8em;
 }
-
-[jax="SVG"] mjx-tool {
-  display: inline-block;
-  position: relative;
-  width: 0;
-  height: 0;
+.mjx-math .mjx-frac {
+margin: 0 0.1em;
 }
-
-[jax="SVG"] mjx-tool > mjx-tip {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-mjx-tool > mjx-tip {
-  display: inline-block;
-  padding: .2em;
-  border: 1px solid #888;
-  font-size: 70%;
-  background-color: #F8F8F8;
-  color: black;
-  box-shadow: 2px 2px 5px #AAAAAA;
-}
-
-g[data-mml-node="maction"][data-toggle] {
-  cursor: pointer;
-}
-
-mjx-status {
-  display: block;
-  position: fixed;
-  left: 1em;
-  bottom: 1em;
-  min-width: 25%;
-  padding: .2em .4em;
-  border: 1px solid #888;
-  font-size: 90%;
-  background-color: #F8F8F8;
-  color: black;
-}
-
-foreignObject[data-mjx-xml] {
-  font-family: initial;
-  line-height: normal;
-  overflow: visible;
-}
-
-.MathJax path {
-  stroke-width: 3;
-}
-
-mjx-container[display="true"] {
-  overflow: auto hidden;
-}
-
-mjx-container[display="true"] + br {
-  display: none;
-}
-</style></head>
-
+</style>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/ZhangXiangqian/" id="logo">Zhang Xiangqian</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
-        
-          <a class="main-nav-link" href="/ZhangXiangqian/">Home</a>
-        
-          <a class="main-nav-link" href="/ZhangXiangqian/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-        
-          <a class="nav-icon" href="/ZhangXiangqian/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
-        
-        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://frankloud.github.io/ZhangXiangqian"></form>
-      </div>
-    </div>
-  </div>
-</header>
-
-      <div class="outer">
-        <section id="main"><article id="post-量子力学推导" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/ZhangXiangqian/2024/08/16/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E6%8E%A8%E5%AF%BC/" class="article-date">
-  <time class="dt-published" datetime="2024-08-16T09:16:43.000Z" itemprop="datePublished">2024-08-16</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="p-name article-title" itemprop="headline name">
-      量子力学推导
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="波粒二象性的能量与动量公式">波粒二象性的能量与动量公式</h2>
-<p>在波粒二象性的框架下，粒子的能量和动量可以用波动和粒子理论来描述。以下是相关的公式：</p>
-<h3 id="光子的能量和动量">1. <strong>光子的能量和动量</strong></h3>
-<p>对于光子（光的粒子），可以使用以下公式来描述它们的能量和动量：</p>
+<nav id="TOC" role="doc-toc">
 <ul>
-<li><p><strong>能量公式</strong>： [ E = h ] 其中 ( E ) 是光子的能量，(
-h ) 是普朗克常数（(6.626 ^{-34}) J·s），( ) 是光子的频率。</p></li>
-<li><p><strong>动量公式</strong>： [ p = ] 或者可以用波长 ( ) 表示动量：
-[ p = ] 其中 ( c ) 是光速（约 (3 ^8) m/s）。</p></li>
-</ul>
-<h3 id="德布罗意波动理论">2. <strong>德布罗意波动理论</strong></h3>
-<p>对于粒子（如电子），德布罗意提出了波粒二象性理论，其中粒子也有与波动相关的特征：</p>
+<li><a href="#波粒二象性的能量与动量公式" id="toc-波粒二象性的能量与动量公式">波粒二象性的能量与动量公式</a>
 <ul>
-<li><p><strong>德布罗意波长</strong>： [ = ] 其中 ( )
-是粒子的德布罗意波长，( p ) 是粒子的动量。</p></li>
-<li><p><strong>动量</strong>： [ p = ]</p></li>
-<li><p><strong>能量</strong>：
-对于非相对论性粒子（例如电子），动能和总能量可以分别表示为：</p>
-<ul>
-<li><p>动能 ( K )： [ K = ] 其中 ( m ) 是粒子的质量，( p )
-是动量。</p></li>
-<li><p>总能量 ( E )（包括静止能量）： [ E = ] 其中 ( m )
-是粒子的静质量，( c ) 是光速。</p></li>
+<li><a href="#光子的能量和动量" id="toc-光子的能量和动量">光子的能量和动量</a></li>
+<li><a href="#德布罗意波动理论" id="toc-德布罗意波动理论">德布罗意波动理论</a></li>
+<li><a href="#相对论性动量和能量" id="toc-相对论性动量和能量">相对论性动量和能量</a></li>
+<li><a href="#总结" id="toc-总结">总结</a></li>
 </ul></li>
 </ul>
-<h3 id="相对论性动量和能量">3. <strong>相对论性动量和能量</strong></h3>
+</nav>
+<h1 id="波粒二象性的能量与动量公式">波粒二象性的能量与动量公式</h1>
+<p>&lt;smiles&gt;N1([CH3])C(=O)N([CH3])c2ncn([CH3])c2C1=O&lt;/smiles&gt;</p>
+<p>在波粒二象性的框架下，粒子的能量和动量可以用波动和粒子理论来描述。以下是相关的公式：</p>
+<h2 id="光子的能量和动量">光子的能量和动量</h2>
+<p>对于光子（光的粒子），可以使用以下公式来描述它们的能量和动量：</p>
+<ul>
+<li><p><strong>能量公式</strong>：</p></li>
+</ul>
+<p><span class="math display">\[E = h \nu\]</span> 其中 <span class="math inline">\(E\)</span> 是光子的能量，<span class="math inline">\(h\)</span> 是普朗克常数（<span class="math inline">\(6.626 \times 10^{-34}\)</span> J·s），<span class="math inline">\(\nu\)</span> 是光子的频率。</p>
+<ul>
+<li><p><strong>动量公式</strong>：</p></li>
+</ul>
+<p><span class="math display">\[p = \frac{h \nu}{c}\]</span>
+或者可以用波长 <span class="math inline">\(\lambda\)</span> 表示动量：
+<span class="math display">\[p = \frac{h}{\lambda}\]</span> 其中 <span class="math inline">\(c\)</span> 是光速（约 <span class="math inline">\(3 \times 10^8\)</span> m/s）。</p>
+<h2 id="德布罗意波动理论">德布罗意波动理论</h2>
+<p>对于粒子（如电子），德布罗意提出了波粒二象性理论，其中粒子也有与波动相关的特征：</p>
+<ul>
+<li><p><strong>德布罗意波长</strong>：</p></li>
+</ul>
+<p><span class="math display">\[\lambda = \frac{h}{p}\]</span> 其中
+<span class="math inline">\(\lambda\)</span> 是粒子的德布罗意波长，<span class="math inline">\(p\)</span> 是粒子的动量。</p>
+<ul>
+<li><p><strong>动量</strong>：</p></li>
+</ul>
+<p><span class="math display">\[p = \frac{h}{\lambda}\]</span></p>
+<ul>
+<li><p><strong>能量</strong>：</p></li>
+</ul>
+<p>对于非相对论性粒子（例如电子），动能和总能量可以分别表示为： - 动能
+<span class="math inline">\(K\)</span>： <span class="math display">\[K
+= \frac{p^2}{2m}\]</span> 其中 <span class="math inline">\(m\)</span>
+是粒子的质量，<span class="math inline">\(p\)</span> 是动量。</p>
+<p>- 总能量 <span class="math inline">\(E\)</span>（包括静止能量）：
+<span class="math display">\[E = \sqrt{(pc)^2 + (m c^2)^2}\]</span> 其中
+<span class="math inline">\(m\)</span> 是粒子的静质量，<span class="math inline">\(c\)</span> 是光速。</p>
+<h2 id="相对论性动量和能量">相对论性动量和能量</h2>
 <p>对于高能粒子，必须使用相对论性公式：</p>
 <ul>
-<li><p><strong>动量</strong>： [ p = ] 其中 ( E ) 是总能量，( c )
-是光速。</p></li>
-<li><p><strong>能量</strong>： [ E^2 = (pc)^2 + (m c<sup>2)</sup>2 ]
-其中 ( m ) 是粒子的静质量。</p></li>
+<li><p><strong>动量</strong>：</p></li>
 </ul>
-<h3 id="总结">总结</h3>
+<p><span class="math display">\[p = \frac{E}{c}\]</span> 其中 <span class="math inline">\(E\)</span> 是总能量，<span class="math inline">\(c\)</span> 是光速。</p>
 <ul>
-<li><strong>光子</strong>：能量 ( E = h )，动量 ( p = ) 或 ( p =
-)。</li>
-<li><strong>粒子</strong>：德布罗意波长 ( = )，动量 ( p =
-)，非相对论性动能 ( K = )，总能量 ( E = )。</li>
+<li><p><strong>能量</strong>：</p></li>
 </ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://frankloud.github.io/ZhangXiangqian/2024/08/16/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E6%8E%A8%E5%AF%BC/" data-id="clzwj39rg00010qsl0omu73fo" data-title="量子力学推导" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-    
-<nav id="article-nav">
-  
-  
-    <a href="/ZhangXiangqian/2024/08/16/%E7%9B%B8%E5%AF%B9%E8%AE%BA%E6%8E%A8%E5%AF%BC/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">相对论推导</div>
-    </a>
-  
-</nav>
-
-  
-</article>
-
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/ZhangXiangqian/archives/2024/08/">August 2024</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/ZhangXiangqian/2024/08/16/%E9%87%8F%E5%AD%90%E5%8A%9B%E5%AD%A6%E6%8E%A8%E5%AF%BC/">量子力学推导</a>
-          </li>
-        
-          <li>
-            <a href="/ZhangXiangqian/2024/08/16/%E7%9B%B8%E5%AF%B9%E8%AE%BA%E6%8E%A8%E5%AF%BC/">相对论推导</a>
-          </li>
-        
-          <li>
-            <a href="/ZhangXiangqian/2024/08/16/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2024 Frank Loud<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/ZhangXiangqian/" class="mobile-nav-link">Home</a>
-  
-    <a href="/ZhangXiangqian/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-
-<script src="/ZhangXiangqian/js/jquery-3.6.4.min.js"></script>
-
-
-
-  
-<script src="/ZhangXiangqian/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-<script src="/ZhangXiangqian/js/script.js"></script>
-
-
-
-
-
-  </div>
+<p><span class="math display">\[E^2 = (pc)^2 + (m c^2)^2\]</span> 其中
+<span class="math inline">\(m\)</span> 是粒子的静质量。</p>
+<h2 id="总结">总结</h2>
+<ul>
+<li><p><strong>光子</strong>：能量 <span class="math inline">\(E = h
+\nu\)</span>，动量 <span class="math inline">\(p = \frac{h
+\nu}{c}\)</span> 或 <span class="math inline">\(p =
+\frac{h}{\lambda}\)</span>。</p></li>
+<li><p><strong>粒子</strong>：德布罗意波长 <span class="math inline">\(\lambda = \frac{h}{p}\)</span>，动量 <span class="math inline">\(p = \frac{h}{\lambda}\)</span>，非相对论性动能
+<span class="math inline">\(K = \frac{p^2}{2m}\)</span>，总能量 <span class="math inline">\(E = \sqrt{(pc)^2 + (m c^2)^2}\)</span>。</p></li>
+</ul>
 </body>
 </html>
